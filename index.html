@@ -1,0 +1,712 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WPRP – WePlay Red Packet Auto-Tracker & Speed Collector. Dual AI Engine, Realme Compatible. Auto-collect voice room red packets in milliseconds." />
+  <meta name="keywords" content="WPRP, WePlay, Red Packet, Auto Clicker, Accessibility, Android App, KSCORE-LABS" />
+  <meta name="author" content="Krishna Singh – KSCORE-LABS" />
+  <meta property="og:title" content="WPRP – WePlay Red Packet Speed Collector" />
+  <meta property="og:description" content="Catch Every WePlay Red Packet at Superhuman Speed. Dual AI Engine. 100% Local & Private." />
+  <meta property="og:type" content="website" />
+  <title>WPRP — WePlay Red Packet Auto-Tracker | KSCORE-LABS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>    
+
+<!-- ═══════════════════════════════════════════
+     BACKGROUND GRID OVERLAY
+════════════════════════════════════════════ -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow glow-cyan" aria-hidden="true"></div>
+<div class="bg-glow glow-magenta" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════
+     HEADER / NAVIGATION
+════════════════════════════════════════════ -->
+<header class="nav-header" id="navbar">
+  <div class="container nav-inner">
+    <!-- Logo -->
+    <a href="#" class="nav-logo" aria-label="WPRP Home">
+      <div class="logo-icon-wrap">
+        <img src="images/wprp-logo.png" alt="WPRP Logo" class="logo-icon-img" />
+        <span class="logo-pulse" aria-hidden="true"></span>
+      </div>
+      <span class="logo-text">WPRP</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#demo" class="nav-link">Demo</a>
+      <a href="#developer" class="nav-link">Developer</a>
+      <a href="#privacy" class="nav-link">Privacy</a>
+    </nav>
+
+    <!-- CTA: Download APK -->
+    <button class="btn btn-nav-cta" id="navDownloadBtn" aria-label="Download APK">
+      <span class="btn-icon">⬇</span>
+      <span id="navBtnLabel">Download APK</span>
+    </button>
+
+    <!-- Mobile Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#features" class="mobile-link">Features</a>
+    <a href="#how-it-works" class="mobile-link">How It Works</a>
+    <a href="#demo" class="mobile-link">Demo</a>
+    <a href="#developer" class="mobile-link">Developer</a>
+    <a href="#privacy" class="mobile-link">Privacy</a>
+    <button class="btn btn-mobile-cta" id="mobileDownloadBtn" aria-label="Download APK">⬇ <span id="mobileBtnLabel">Download APK</span></button>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <!-- Left: Text Content -->
+    <div class="hero-content">
+      <!-- Badge -->
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        ⚡ DUAL AI ENGINE &nbsp;•&nbsp; ALL DEVICES SUPPORTED
+      </div>
+
+      <h1 class="hero-headline">
+        Catch Every <span class="text-gradient-cyan">WePlay Red Packet</span><br/>
+        at <span class="text-gradient-magenta">Superhuman Speed</span>
+      </h1>
+
+      <p class="hero-subheadline">
+        Combines real-time computer vision frame detection and ultra-low latency
+        accessibility gestures to auto-collect voice room red packets in
+        <strong class="text-cyan">milliseconds</strong>.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-ctas">
+        <a href="#download" class="btn btn-primary" id="primaryCTA">
+          <svg class="android-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.523 15.341a.5.5 0 0 1-.5.5H6.977a.5.5 0 0 1-.5-.5V9.5h11.046v5.841zM6.455 8.5l-1.5-2.598A.5.5 0 0 1 5.389 5h13.222a.5.5 0 0 1 .434.75L17.545 8.5H6.455zM8.5 17.5a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm5 0a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>
+          </svg>
+          <span id="heroCtaLabel">Direct APK Download</span>
+        </a>
+        <a href="#how-it-works" class="btn btn-secondary">
+          ▶ How It Works
+        </a>
+        <a href="#features" class="btn btn-ghost">
+          Explore Features →
+        </a>
+      </div>
+
+      <!-- Mini Badges -->
+      <div class="hero-mini-badges">
+        <span class="mini-badge">🔒 100% Private</span>
+        <span class="mini-badge">📱 Android 10+</span>
+        <span class="mini-badge">⚡ 10ms Response</span>
+        <span class="mini-badge">🆓 Free & Open</span>
+      </div>
+    </div>
+
+    <!-- Right: Phone Mockup -->
+    <div class="hero-visual">
+      <div class="phone-wrap">
+        <div class="phone-mockup">
+          <!-- Phone Frame -->
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <!-- WePlay Voice Room Preview -->
+              <div class="phone-screen-bg">
+                <div class="voice-room-header">
+                  <span class="vr-icon">🎤</span>
+                  <span class="vr-title">Voice Room — 1,284 Online</span>
+                </div>
+                <!-- Animated Red Packets -->
+                <div class="red-packets-area" aria-label="Animated red packets">
+                  <div class="red-packet rp-1">🧧</div>
+                  <div class="red-packet rp-2">🧧</div>
+                  <div class="red-packet rp-3">🧧</div>
+                  <div class="red-packet rp-4">🧧</div>
+                  <div class="red-packet rp-5">🧧</div>
+                </div>
+                <!-- Tap Wave Effects -->
+                <div class="tap-wave tw-1" aria-hidden="true"></div>
+                <div class="tap-wave tw-2" aria-hidden="true"></div>
+              </div>
+
+              <!-- Floating Overlay Widget on Phone -->
+              <div class="phone-widget">
+                <div class="pw-header">
+                  <span class="pw-logo">⚡ WPRP</span>
+                  <span class="pw-status active" id="phoneWidgetStatus">ACTIVE</span>
+                </div>
+                <div class="pw-counter">Clicks: <span id="phoneClickCount">0</span></div>
+                <div class="pw-controls">
+                  <button class="pw-btn pause" id="phoneWidgetBtn">⏸</button>
+                  <button class="pw-btn settings">⚙</button>
+                </div>
+              </div>
+            </div>
+            <div class="phone-bottom-bar"></div>
+          </div>
+        </div>
+        <!-- Phone Glow -->
+        <div class="phone-glow" aria-hidden="true"></div>
+        <!-- Orbiting Particles -->
+        <div class="orbit-ring" aria-hidden="true">
+          <div class="orbit-dot od-1"></div>
+          <div class="orbit-dot od-2"></div>
+          <div class="orbit-dot od-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-arrow"></div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LIVE METRICS BANNER
+════════════════════════════════════════════ -->
+<section class="metrics-section" id="metrics" aria-label="Performance Metrics">
+  <div class="container">
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-value">10ms–50ms</div>
+        <div class="metric-label">Tap Response Speed</div>
+        <div class="metric-bar"><div class="metric-bar-fill" style="width:95%"></div></div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-value"><span class="count-up" data-target="99.4">99.4</span>%</div>
+        <div class="metric-label">Detection Accuracy</div>
+        <div class="metric-bar"><div class="metric-bar-fill" style="width:99%"></div></div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🤖</div>
+        <div class="metric-value">Dual</div>
+        <div class="metric-label">Vision + Node Engine</div>
+        <div class="metric-tags">
+          <span class="mtag">MediaProjection</span>
+          <span class="mtag">Accessibility</span>
+        </div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🔒</div>
+        <div class="metric-value"><span class="count-up" data-target="100">100</span>%</div>
+        <div class="metric-label">Local & Private</div>
+        <div class="metric-bar"><div class="metric-bar-fill green" style="width:100%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     KEY FEATURES GRID
+════════════════════════════════════════════ -->v 
+<section class="features-section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">CAPABILITIES</span>
+      <h2 class="section-title">Engineered for <span class="text-gradient-cyan">Maximum Performance</span></h2>
+      <p class="section-subtitle">Every component built to give you the fastest, most reliable red packet collection experience possible.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <!-- Feature 1 -->
+      <div class="feature-card featured">
+        <div class="fc-glow"></div>
+        <div class="fc-icon-wrap cyan">
+          <span class="fc-icon">🤖</span>
+        </div>
+        <h3 class="fc-title">Dual AI Engine</h3>
+        <p class="fc-desc">Real-time MediaProjection frame analysis with sub-50ms response, coupled with an Accessibility Node fallback for guaranteed detection across all ROM variants.</p>
+        <div class="fc-tags">
+          <span class="fc-tag">MediaProjection</span>
+          <span class="fc-tag">Frame Delta</span>
+          <span class="fc-tag">Node Query</span>
+        </div>
+        <div class="fc-diagram">
+          <div class="fd-node">Vision AI</div>
+          <div class="fd-arrow">→</div>
+          <div class="fd-node active">Tap Event</div>
+          <div class="fd-arrow">←</div>
+          <div class="fd-node">Node AI</div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="fc-glow magenta"></div>
+        <div class="fc-icon-wrap magenta">
+          <span class="fc-icon">📱</span>
+        </div>
+        <h3 class="fc-title">Universal Android Compatibility</h3>
+        <p class="fc-desc">Bypasses screen share security blocks gracefully using Accessibility Auto-Clicker Mode — works on locked-down OEM ROMs without root.</p>
+        <div class="fc-compat-grid">
+          <span class="compat-chip">Stock Android</span>
+          <span class="compat-chip">ColorOS</span>
+          <span class="compat-chip">MIUI</span>
+          <span class="compat-chip">One UI</span>
+          <span class="compat-chip">OxygenOS</span>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="fc-glow cyan"></div>
+        <div class="fc-icon-wrap cyan">
+          <span class="fc-icon">🪟</span>
+        </div>
+        <h3 class="fc-title">Floating Control Overlay</h3>
+        <p class="fc-desc">Minimalist glass widget floats over any app. Drag anywhere, tap Play/Pause, monitor real-time click count — all without leaving WePlay.</p>
+        <ul class="fc-list">
+          <li>✦ Drag-and-drop repositioning</li>
+          <li>✦ Live click counter</li>
+          <li>✦ Transparent glass design</li>
+        </ul>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card">
+        <div class="fc-glow green"></div>
+        <div class="fc-icon-wrap green">
+          <span class="fc-icon">⚙️</span>
+        </div>
+        <h3 class="fc-title">Customizable Precision</h3>
+        <p class="fc-desc">Fine-tune confidence threshold from 10% to 100% and set custom tap delay speed for optimal performance on your device.</p>
+        <div class="fc-sliders">
+          <div class="slider-demo">
+            <span class="sd-label">Confidence</span>
+            <div class="sd-track"><div class="sd-thumb" style="left:75%"></div></div>
+            <span class="sd-val">75%</span>
+          </div>
+          <div class="slider-demo">
+            <span class="sd-label">Tap Delay</span>
+            <div class="sd-track"><div class="sd-thumb cyan" style="left:30%"></div></div>
+            <span class="sd-val">15ms</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="feature-card">
+        <div class="fc-glow magenta"></div>
+        <div class="fc-icon-wrap magenta">
+          <span class="fc-icon">🛡️</span>
+        </div>
+        <h3 class="fc-title">Zero Data Collection</h3>
+        <p class="fc-desc">100% on-device processing entirely in RAM. No screen recording saved to storage. No personal data exported. No network calls. Ever.</p>
+        <div class="fc-privacy-grid">
+          <div class="priv-item ok">✓ No Storage Write</div>
+          <div class="priv-item ok">✓ No Network</div>
+          <div class="priv-item ok">✓ No Cloud Sync</div>
+          <div class="priv-item ok">✓ RAM Only</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════ -->
+<section class="hiw-section" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">SETUP GUIDE</span>
+      <h2 class="section-title">Up & Running in <span class="text-gradient-cyan">60 Seconds</span></h2>
+      <p class="section-subtitle">Four simple steps from install to catching your first red packet automatically.</p>
+    </div>
+
+    <div class="steps-track">
+      <div class="steps-line" aria-hidden="true"></div>
+
+      <div class="step-card" data-step="1">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <div class="step-icon-wrap">
+            <span class="step-icon">♿</span>
+          </div>
+          <h3 class="step-title">Enable Accessibility Service</h3>
+          <p class="step-desc">Go to <strong>Settings → Accessibility → WPRP</strong> and enable the service. This grants the gesture dispatch permission needed for lightning-fast tapping.</p>
+          <div class="step-code">Settings → Accessibility → WPRP → Enable</div>
+        </div>
+      </div>
+
+      <div class="step-card" data-step="2">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <div class="step-icon-wrap magenta">
+            <span class="step-icon">🪟</span>
+          </div>
+          <h3 class="step-title">Allow Floating Window</h3>
+          <p class="step-desc">Grant the <strong>Display Over Other Apps</strong> permission. This enables the control widget to float over WePlay without interrupting your session.</p>
+          <div class="step-code">Settings → Apps → WPRP → Display Over Other Apps</div>
+        </div>
+      </div>
+
+      <div class="step-card" data-step="3">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <div class="step-icon-wrap green">
+            <span class="step-icon">🚀</span>
+          </div>
+          <h3 class="step-title">Start the Auto-Tracker</h3>
+          <p class="step-desc">Open WPRP, choose your engine mode (Vision / Accessibility / Dual), set your confidence threshold, and tap <strong>Start</strong> — the floating widget appears.</p>
+          <div class="step-code">WPRP App → Select Mode → Start</div>
+        </div>
+      </div>
+
+      <div class="step-card" data-step="4">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <div class="step-icon-wrap">
+            <span class="step-icon">🎉</span>
+          </div>
+          <h3 class="step-title">Open WePlay & Collect!</h3>
+          <p class="step-desc">Switch to WePlay, join any voice room, tap <strong>▶ Play</strong> on the floating overlay — and watch WPRP auto-collect every red packet at superhuman speed.</p>
+          <div class="step-code">WePlay → Voice Room → ▶ Play on Widget</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     INTERACTIVE FLOATING WIDGET SIMULATOR
+════════════════════════════════════════════ -->
+<section class="demo-section" id="demo">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">LIVE PREVIEW</span>
+      <h2 class="section-title">Try the <span class="text-gradient-cyan">Widget Simulator</span></h2>
+      <p class="section-subtitle">Interact with a live simulation of the WPRP floating overlay — drag it, play/pause, and watch the click counter in real-time.</p>
+    </div>
+
+    <div class="demo-arena">
+      <!-- Demo Phone Frame -->
+      <div class="demo-phone">
+        <div class="demo-phone-frame">
+          <div class="demo-screen">
+            <!-- Simulated WePlay BG -->
+            <div class="sim-bg">
+              <div class="sim-room-name">🎤 Live Voice Room</div>
+              <div class="sim-users">👥 1,284 Listening</div>
+              <!-- Animated Red Packets in Demo -->
+              <div class="sim-packets" id="simPackets" aria-live="polite">
+                <!-- dynamically added -->
+              </div>
+              <div class="sim-hint" id="simHint">Tap ▶ on the widget to start collecting!</div>
+            </div>
+
+            <!-- Draggable Widget -->
+            <div class="floating-widget" id="floatingWidget" role="complementary" aria-label="WPRP Floating Control Widget">
+              <div class="fw-drag-handle" id="fwDragHandle" title="Drag to move">
+                <span class="fw-logo">⚡ WPRP</span>
+                <span class="fw-drag-icon">⠿</span>
+              </div>
+              <div class="fw-status" id="fwStatus">PAUSED</div>
+              <div class="fw-counter">Clicks: <span id="fwClickCount">0</span></div>
+              <div class="fw-controls">
+                <button class="fw-btn play-pause" id="fwPlayPause" aria-label="Play or Pause">▶</button>
+                <button class="fw-btn fw-reset" id="fwReset" aria-label="Reset counter" title="Reset">↺</button>
+              </div>
+              <div class="fw-confidence">
+                <span class="fc-l">Conf:</span>
+                <input type="range" class="fw-slider" id="fwConfSlider" min="10" max="100" value="75" aria-label="Confidence threshold" />
+                <span class="fc-v" id="fwConfVal">75%</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Demo Instructions Panel -->
+      <div class="demo-instructions">
+        <h3 class="di-title">🎮 How to Interact</h3>
+        <ul class="di-list">
+          <li><span class="di-key">▶ Play</span> — Toggle widget between ACTIVE and PAUSED states</li>
+          <li><span class="di-key">↺ Reset</span> — Reset the click counter to zero</li>
+          <li><span class="di-key">⠿ Drag</span> — Drag the widget header to reposition it</li>
+          <li><span class="di-key">Conf Slider</span> — Adjust detection confidence threshold</li>
+        </ul>
+        <div class="di-stats">
+          <div class="dis-item">
+            <span class="dis-label">Session Clicks</span>
+            <span class="dis-val" id="diSessionClicks">0</span>
+          </div>
+          <div class="dis-item">
+            <span class="dis-label">Status</span>
+            <span class="dis-val" id="diStatus">Paused</span>
+          </div>
+          <div class="dis-item">
+            <span class="dis-label">Confidence</span>
+            <span class="dis-val" id="diConf">75%</span>
+          </div>
+        </div>
+        <p class="di-note">💡 This is a web simulation. The real app achieves 10–50ms tap response on-device.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     DOWNLOAD SECTION
+════════════════════════════════════════════ -->
+<section class="download-section" id="download">
+  <div class="container">
+    <div class="download-card">
+      <div class="dc-glow" aria-hidden="true"></div>
+      <div class="dc-content">
+        <span class="section-tag">GET THE APP</span>
+        <h2 class="dc-title">Ready to <span class="text-gradient-cyan">Level Up</span> Your WePlay?</h2>
+        <p class="dc-desc" id="dcDesc">Download WPRP — 100% free, open, and local. No account, no ads, no tracking. Install in seconds.</p>
+
+        <!-- Release Info Bar (visible when release metadata is loaded) -->
+        <div class="release-info-bar" id="releaseInfoBar" style="display:none">
+          <span class="rib-tag" id="ribTag">v1.0</span>
+          <span class="rib-date" id="ribDate">—</span>
+          <span class="rib-size" id="ribSize">—</span>
+        </div>
+
+        <!-- Download Buttons (always visible and interactive) -->
+        <div class="dc-buttons">
+          <button class="btn btn-primary btn-large" id="apkDownloadBtn" aria-label="Download APK">
+            <svg class="android-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.523 15.341a.5.5 0 0 1-.5.5H6.977a.5.5 0 0 1-.5-.5V9.5h11.046v5.841zM6.455 8.5l-1.5-2.598A.5.5 0 0 1 5.389 5h13.222a.5.5 0 0 1 .434.75L17.545 8.5H6.455zM8.5 17.5a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm5 0a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>
+            </svg>
+            <span id="apkBtnLabel">Download APK</span>
+            <span class="btn-badge">FREE</span>
+          </button>
+          <a href="https://github.com/KSCoreLabs/WPRP-Update/releases" target="_blank" rel="noopener" class="btn btn-secondary" id="allReleasesBtn">
+            📋 All Releases →
+          </a>
+        </div>
+
+        <!-- Notice if no release found on GitHub yet -->
+        <div id="releaseError" style="display:none" class="release-error">
+          <p>⚠️ No APK release published on GitHub yet. Click "Download APK" anytime to check or download when ready!</p>
+        </div>
+
+        <div class="dc-meta">
+          <span id="dcMetaVersion">📦 APK Direct</span>
+          <span>📱 Android 10+</span>
+          <span>🔐 100% On-Device</span>
+          <span>⭐ KSCORE-LABS</span>
+        </div>
+      </div>
+      <div class="dc-visual">
+        <!-- Animated Download Arrow -->
+        <div class="dl-anim">
+          <div class="dl-circle">
+            <div class="dl-arrow">⬇</div>
+          </div>
+          <div class="dl-rings">
+            <div class="dl-ring r1"></div>
+            <div class="dl-ring r2"></div>
+            <div class="dl-ring r3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     DEVELOPER SECTION
+════════════════════════════════════════════ -->
+<section class="developer-section" id="developer">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">THE BUILDER</span>
+      <h2 class="section-title">About <span class="text-gradient-cyan">KSCORE-LABS</span></h2>
+    </div>
+
+    <div class="dev-card">
+      <div class="dev-hex-bg" aria-hidden="false">
+        <img src="images/kscorelabs-logo.webp" alt="KSCORE-LABS Logo" class="kscore-logo-img" />
+      </div>
+      <div class="dev-info">
+        <div class="dev-avatar">
+          <div class="dev-avatar-ring"></div>
+          <div class="dev-avatar-inner">
+            <img src="images/wprp-logo.png" alt="WPRP App Icon" class="dev-avatar-logo" />
+          </div>
+        </div>
+        <div class="dev-bio">
+          <h3 class="dev-name">KSCoreLabs</h3>
+          <span class="dev-handle">by: Krishna Singh</span>
+          <p class="dev-blurb">Independent Android developer & automation engineer. Building high-performance, privacy-first Android tools that push the limits of the Accessibility & Vision APIs.</p>
+          <div class="dev-socials">
+            <a href="https://kscorelabs.github.io/" target="_blank" rel="noopener" class="social-link web" aria-label="KSCORE-LABS Website">
+              <span class="sl-icon">🌐</span>
+              <span class="sl-label">Visite The Website </span>
+            </a>
+            <a href="https://www.instagram.com/kscorelabs" target="_blank" rel="noopener" class="social-link insta" aria-label="Instagram">
+              <span class="sl-icon">
+                <svg class="insta-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </span>
+              <span class="sl-label">@kscorelabs</span>
+            </a>
+            <a href="https://www.facebook.com/SinghKrishna0006" target="_blank" rel="noopener" class="social-link fb" aria-label="Facebook">
+              <span class="sl-icon">👤</span>
+              <span class="sl-label">@SinghKrishna0006</span>
+            </a>
+            <a href="https://x.com/kscorelabs" target="_blank" rel="noopener" class="social-link twitter" aria-label="X (Twitter)">
+              <span class="sl-icon">𝕏</span>
+              <span class="sl-label">@kscorelabs</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PRIVACY POLICY SECTION
+════════════════════════════════════════════ -->
+<section class="privacy-section" id="privacy">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">LEGAL & TRUST</span>
+      <h2 class="section-title">Terms, Privacy <span class="text-gradient-cyan">& Permissions</span></h2>
+    </div>
+
+    <div class="privacy-grid">
+
+      <div class="priv-card">
+        <div class="priv-card-icon">🔒</div>
+        <h3 class="priv-card-title">Privacy Policy</h3>
+        <div class="priv-card-body">
+          <p><strong>No Data Collection:</strong> WPRP does not collect, store, transmit, or share any personal data, usage statistics, or device information.</p>
+          <p><strong>On-Device Only:</strong> All screen frame analysis is performed entirely in RAM and immediately discarded. No images, frames, or screenshots are ever written to storage.</p>
+          <p><strong>No Network Access:</strong> WPRP requires zero internet permissions. It operates entirely offline and makes no outbound network requests of any kind.</p>
+          <p><strong>No Accounts:</strong> No sign-in, no accounts, no email, no phone number required.</p>
+        </div>
+      </div>
+
+      <div class="priv-card">
+        <div class="priv-card-icon">♿</div>
+        <h3 class="priv-card-title">Accessibility Service</h3>
+        <div class="priv-card-body">
+          <p><strong>Purpose:</strong> The Accessibility Service is used exclusively to dispatch programmatic tap gestures on the WePlay application UI.</p>
+          <p><strong>Scope:</strong> WPRP only interacts with WePlay app windows. It does not read content from other applications, access notifications, or observe keystrokes.</p>
+          <p><strong>Revocable:</strong> You can disable the Accessibility Service at any time from Settings. WPRP will immediately stop functioning.</p>
+        </div>
+      </div>
+
+      <div class="priv-card">
+        <div class="priv-card-icon">📽️</div>
+        <h3 class="priv-card-title">MediaProjection</h3>
+        <div class="priv-card-body">
+          <p><strong>Purpose:</strong> MediaProjection is used to capture live screen frames for real-time red packet detection (Vision Engine mode only).</p>
+          <p><strong>RAM-Only Processing:</strong> Captured frames are analyzed using computer vision algorithms in RAM. Frames are never encoded, compressed, or written to any storage location.</p>
+          <p><strong>User-Controlled:</strong> MediaProjection starts only when you tap "Start" and stops immediately when you tap "Stop" or close the app.</p>
+        </div>
+      </div>
+
+      <div class="priv-card">
+        <div class="priv-card-icon">📜</div>
+        <h3 class="priv-card-title">Terms of Use</h3>
+        <div class="priv-card-body">
+          <p><strong>Fair Use:</strong> WPRP is intended for personal use only. Users are responsible for ensuring their usage complies with WePlay's Terms of Service.</p>
+          <p><strong>No Warranty:</strong> WPRP is provided "as is" without warranty of any kind. KSCORE-LABS is not liable for any account actions taken by WePlay.</p>
+          <p><strong>Open Source:</strong> Source code is available for community review. Redistribution is permitted with proper attribution to KSCORE-LABS.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="footer" id="footer">
+  <div class="footer-top-line" aria-hidden="true"></div>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo footer-logo" aria-label="WPRP Home">
+        <div class="logo-icon-wrap small">
+          <img src="images/wprp-logo.png" alt="WPRP Logo" class="logo-icon-img" />
+          <span class="logo-pulse" aria-hidden="true"></span>
+        </div>
+        <span class="logo-text">WPRP</span>
+      </a>
+      <p class="footer-tagline">WePlay Red Packet Auto-Tracker & Speed Collector. Built with passion by <a href="https://kscorelabs.github.io/" target="_blank" rel="noopener" class="footer-link">KSCORE-LABS</a>.</p>
+    </div>
+
+    <div class="footer-links-grid">
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navigation</h4>
+        <a href="#features" class="footer-nav-link">Features</a>
+        <a href="#how-it-works" class="footer-nav-link">How It Works</a>
+        <a href="#demo" class="footer-nav-link">Live Demo</a>
+        <a href="#download" class="footer-nav-link">Download</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Legal</h4>
+        <a href="#privacy" class="footer-nav-link">Privacy Policy</a>
+        <a href="#privacy" class="footer-nav-link">Terms of Use</a>
+        <a href="#privacy" class="footer-nav-link">Accessibility Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Connect</h4>
+        <a href="https://kscorelabs.github.io/" target="_blank" rel="noopener" class="footer-nav-link">🌐 Website</a>
+        <a href="https://x.com/kscorelabs" target="_blank" rel="noopener" class="footer-nav-link">𝕏 Twitter</a>
+        <a href="https://www.instagram.com/kscorelabs" target="_blank" rel="noopener" class="footer-nav-link">
+          <svg class="insta-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/SinghKrishna0006" target="_blank" rel="noopener" class="footer-nav-link">👤 Facebook</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="footer-copy">&#169; 2026-27 WPRP By KSCoreLabs</p>
+      <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        ↑ Top
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script src="script/main.js"></script>
+
+<!-- Toast Notification -->
+<div id="wprpToast" class="wprp-toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <span id="wprpToastIcon" class="wprp-toast-icon">⚠️</span>
+  <span id="wprpToastMsg" class="wprp-toast-msg">No APK release found on GitHub yet.</span>
+  <button id="wprpToastClose" class="wprp-toast-close" aria-label="Close notification">&times;</button>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+# Robots.txt for WPRP / KSCORE-LABS
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kscorelabs.github.io/sitemap.xml

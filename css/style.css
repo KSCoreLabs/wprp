@@ -475,6 +475,10 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 12px); }
   margin-bottom: 24px;
   letter-spacing: -0.01em;
 }
+.hero-brand-name {
+  color: var(--cyan);
+  text-shadow: 0 0 25px var(--cyan-glow);
+}
 .hero-subheadline {
   font-size: 1.1rem;
   color: var(--text-secondary);
